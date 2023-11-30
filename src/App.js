@@ -1,293 +1,47 @@
 import React from 'react';
 import "./style.scss"
 import { images } from "./assets/img/index"
-import projectImg from "./assets/img/project.png"
+import Header from './components/Header';
+import Hero from './components/Hero';
+import Banner from './components/Banner';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import AboutMe from './components/AboutMe';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import FloatingIcon from './components/FloatingIcon';
 
 function App() {
   return (
     <div className="wrapper">
       {/* <!-- Nav --> */}
-      <header className="primary-header" id="home">
-        <div className="left">
-          <div>
-            <h1>Kiran</h1>
-          </div>
-          <div className="line"></div>
-          <div>
-            <h1>Soft. Engineer</h1>
-          </div>
-        </div>
-        <div className="right">
-
-          <input type="checkbox" id="check" />
-          <label htmlFor="check" className="menu-icon">
-            <i className="fa-solid fa-bars"></i>
-          </label>
-
-          <ul className="navigation">
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </header>
+      <Header />
 
       {/* <!-- Hero --> */}
-      <section className="section1" id="hero">
-        <div className="hero">
-          <div className="left">
-            <div className="name">Hi, I am Kiran Gautam</div>
-            <div className="tag">Software Engineer</div>
-            <div className="sub-tag">I love coding and teaching</div>
-            <a href={images.projectImg} download>
-              <button>
-                Download CV
-                <i className="fa-solid fa-download"></i>
-              </button>
-            </a>
-          </div>
-          <div className="right">
-            <img src={images.userImg} alt="User" />
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* <!-- Banner --> */}
-      <section className="section2">
-        <div className="info-container">
-          <div className="info-lists">
-            <div className="info-content">
-              <div className="icon-container">
-                <i className="fa-solid fa-award"></i>
-              </div>
-              <div>
-                <h5>IT</h5>
-                <p>Graduate</p>
-              </div>
-            </div>
-            <div className="divider">
-            </div>
-
-            <div className="info-content">
-              <div className="icon-container">
-                <i className="fa-solid fa-award"></i>
-              </div>
-              <div>
-                <h5>IT</h5>
-                <p>Graduate</p>
-              </div>
-            </div>
-            <div className="divider">
-            </div>
-            <div className="info-content">
-              <div className="icon-container">
-                <i className="fa-solid fa-award"></i>
-              </div>
-              <div>
-                <h5>IT</h5>
-                <p>Graduate</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-
-
-      </section>
+      <Banner />
 
       {/* <!-- Skills --> */}
-      <section className="section3" id="skills">
-        <div className="skills-container">
-          <div>
-            <i className="fa-brands fa-html5"></i>
-            <div>HTML</div>
-          </div>
-          <div>
-            <i className="fa-brands fa-html5"></i>
-            <div>HTML</div>
-          </div>
-          <div>
-            <i className="fa-brands fa-html5"></i>
-            <div>HTML</div>
-          </div>
-        </div>
-      </section>
+      <Skills />
 
 
       {/* <!-- Projects --> */}
-      <section className="section4" id="projects">
-        <h2 className="title">My Recent Works</h2>
-        <div className="project-container">
-
-          <div className="project-card">
-            <div className="top">
-              <img src={images.projectImg} alt="project" width="100%" />
-            </div>
-            <div className="bottom">
-              <div className="icons">
-                <i className="fa-brands fa-github"></i>
-                <i className="fa-brands fa-react"></i>
-              </div>
-              <p>Portfolio with React</p>
-              <p>Nov 1, 2023</p>
-            </div>
-          </div>
-
-          <div className="project-card">
-            <div className="top">
-              <img src={images.projectImg} alt="project" width="100%" />
-            </div>
-            <div className="bottom">
-              <div className="icons">
-                <i className="fa-brands fa-github"></i>
-                <i className="fa-brands fa-react"></i>
-              </div>
-              <p>Portfolio with React</p>
-              <p>Nov 1, 2023</p>
-            </div>
-          </div>
-          <div className="project-card">
-            <div className="top">
-              <img src={images.projectImg} alt="project" width="100%" />
-            </div>
-            <div className="bottom">
-              <div className="icons">
-                <i className="fa-brands fa-github"></i>
-                <i className="fa-brands fa-react"></i>
-              </div>
-              <p>Portfolio with React</p>
-              <p>Nov 1, 2023</p>
-            </div>
-          </div>
-
-          <div className="project-card">
-            <div className="top">
-              <img src={images.projectImg} alt="project" width="100%" />
-            </div>
-            <div className="bottom">
-              <div className="icons">
-                <i className="fa-brands fa-github"></i>
-                <i className="fa-brands fa-react"></i>
-              </div>
-              <p>Portfolio with React</p>
-              <p>Nov 1, 2023</p>
-            </div>
-          </div>
-          <div className="project-card">
-            <div className="top">
-              <img src={images.projectImg} alt="project" width="100%" />
-            </div>
-            <div className="bottom">
-              <div className="icons">
-                <i className="fa-brands fa-github"></i>
-                <i className="fa-brands fa-react"></i>
-              </div>
-              <p>Portfolio with React</p>
-              <p>Nov 1, 2023</p>
-            </div>
-          </div>
-          <div className="project-card">
-            <div className="top">
-              <img src={images.projectImg} alt="project" width="100%" />
-            </div>
-            <div className="bottom">
-              <div className="icons">
-                <i className="fa-brands fa-github"></i>
-                <i className="fa-brands fa-react"></i>
-              </div>
-              <p>Portfolio with React</p>
-              <p>Nov 1, 2023</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Projects />
 
       {/* <!-- About Me --> */}
-      <section className="section5" id="about">
-        <section className="about-me">
-          <h2 className="title">About me</h2>
-          <div className="about-container">
-            <div className="left">
-              <img src={images.userImg} alt="" width="60%" />
-            </div>
-            <div className="right">
-              <h2>Kiran Gautam</h2>
-              <p className="detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus a quia aliquid architecto? Quisquam neque voluptatem vitae. Excepturi sapiente expedita rerum, laudantium eos, odio, aperiam quasi vero soluta eligendi praesentium!</p>
-
-              <div className="interest-container">
-                <div className="tag">
-                  <h2>Interests</h2>
-                </div>
-                <div className="interests">
-                  <span>Coding</span>
-                  <span>Football</span>
-                  <span>Movies</span>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
-      </section>
+      <AboutMe />
 
       {/* <!-- Get in Touch --> */}
-      <section className="section6" id="contact">
-        <h2 className="title">Get in Touch</h2>
-        <div className="socials">
-          <i className="fa-brands fa-linkedin"></i>
-          <i className="fa-brands fa-facebook"></i>
-          <i className="fa-brands fa-github"></i>
-          <i className="fa-brands fa-youtube"></i>
-        </div>
-        <h2>OR</h2>
-        <a href="mailto:admin@gmail.com">
-
-          <div className="email-section">
-            <div className="email">
-              <p>admin@gmail.com</p>
-              <div className="send">
-                <i className="fa-solid fa-envelope"></i>
-              </div>
-            </div>
-          </div>
-        </a>
-
-      </section>
+      <Contact />
 
 
       {/* <!-- footer --> */}
-      <footer>
-        <div className="footer-container">
-          <div className="links">
-            <h3>Links</h3>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contacts">Contacts</a></li>
-            </ul>
-          </div>
-          <div className="social-links">
-            <h3>Social Links</h3>
-            <ul>
-              <li><a href="#home">Linkedin</a></li>
-              <li><a href="#skills">Facebook</a></li>
-              <li><a href="#projects">Github</a></li>
-              <li><a href="#contacts">X</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="copy">&copy; Copy right all reserved. Made by me. ❤️</div>
-      </footer>
+      <Footer />
 
       {/* <!-- Floating Icon --> */}
-      <a href="#hero">
-        <div className="floating">
-          <i className="fa-solid fa-arrow-up"></i>
-        </div>
-      </a>
+      <FloatingIcon />
     </div>
   );
 }
